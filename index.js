@@ -13,7 +13,7 @@ const genres = [
     { id: 3, name: 'Crime' },
     { id: 4, name: 'Drama' },
     { id: 5, name: 'Music' },
-]
+];
 
 // routes
 app.get('/', (req, res) => res.send('Hello World!'));
@@ -59,7 +59,7 @@ function validateGenre(body) {
         name: Joi.string().min(3).max(30).required()
     }
     return Joi.validate(body, schema);
-}
+};
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
